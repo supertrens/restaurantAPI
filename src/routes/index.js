@@ -1,19 +1,17 @@
-import express 		from 	"express";
-import config 		from 	"../config";
-import middleware 	from 	"../middleware";
-import initalizeDb  from	"../db";
-
-
+import express from 'express';
+import config from '../config';
+import initializeDb from '../db';
+import middleware from '../middleware';
 
 let router = express();
 
-//connect to db
-initialiazeDb (db => {
+// connect to db
+initializeDb(db => {
 
-	//internal middleware
-	router.use(middleware({config , db}));
+  // internal middleware
+  router.use(middleware({ config, db }));
 
-	// api routes v1 (/v1)
+  // api routes v1 (/v1)
 
 });
 
